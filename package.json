@@ -1,0 +1,31 @@
+{
+  "name": "my-cordova",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "copy-to-cordova": "cp config.xml cordova/config.xml",
+    "clear-cordova": "rm -rf cordova/www/*",
+    "a:pf:rm": "cd cordova && cordova platform remove android",
+    "a:pf:add": "cd cordova && cordova platform add android@latest",
+    "cordova-platform": "npm run a:pf:rm && npm run a:pf:add",
+    "cordova-run": "npm run cordova-platform && cd cordova && cordova run android --device",
+    "cordova": "npm run clear-cordova && npm run build && npm run copy-to-cordova && npm run cordova-run",
+    "rc": "cd cordova && cordova run android --nobuild --device",
+    "ls:a": "cd cordova && cordova run android --list",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@types/cordova": "^11.0.3",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "pinia": "^2.1.7",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.10",
+    "vue-tsc": "^2.0.16"
+  }
+}

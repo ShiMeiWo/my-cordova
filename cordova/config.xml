@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.cordova.hellocordova" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>HelloCordova</name>
+    <description>Sample Apache Cordova App</description>
+    <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
+        Apache Cordova Team
+    </author>
+    <access origin="*" />
+    <content src="index.html" />
+    <access origin="https://cordova.apache.org" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <platform name="android">
+
+        <preference name="AndroidPersistentFileLocation" value="Internal" />
+        <preference name="LoadingDialog" value="Now Loading..." />
+        
+        <preference name="AndroidXEnabled" value="true"/>
+        
+        <preference name="android-minSdkVersion" value="30" />
+        <preference name="android-targetSdkVersion" value="33" />
+
+        <preference name="GradlePluginKotlinEnabled" value="true" />
+        <preference name="GradlePluginKotlinVersion" value="1.7.21" />
+        <!-- 将来的にここは false のみとなる予定
+        <preference name="AndroidInsecureFileModeEnabled" value="true" />
+        -->
+        <!-- Google のサービスを利用する場合に使用
+        <preference name="AndroidGradlePluginGoogleServicesEnabled" value="true" />
+        <preference name="GradlePluginGoogleServicesEnabled" value="true" />
+        <preference name="GradlePluginGoogleServicesVersion" value="7.4.0" />
+        -->
+    </platform>
+    <platform name="ios">
+        <preference name="PreferredContentMode" value="mobile" />
+        <preference name="deployment-target" value="14" />
+    
+        
+    </platform>
+    <preference name="Orientation" value="portrait" />
+</widget>
